@@ -30,9 +30,11 @@ import { BoardService } from "../../services/board.service";
       <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
         {{ data.isNew ? "Add Task" : "Update Task" }}
       </button>
+      <app-delete-button (delete)="handleTaskDelete()" *ngIf="!data.isNew">
+      </app-delete-button>
     </div>
   `,
-  styleUrls: ["./task-dialog.component.scss"]
+  styleUrls: ["./dialog.scss"]
 })
 export class TaskDialogComponent {
   labelOptions = ["purple", "blue", "green", "yellow", "red", "gray"];

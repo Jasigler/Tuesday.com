@@ -10,6 +10,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { environment } from "../environments/environment";
 import { KanbanModule } from "./kanban/kanban.module";
+import { MatGridListModule, MatTableModule } from "@angular/material";
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
@@ -21,7 +22,9 @@ import { KanbanModule } from "./kanban/kanban.module";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    KanbanModule
+    KanbanModule,
+    MatTableModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
